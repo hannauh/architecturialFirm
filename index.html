@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Architectural firm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+<header class="header">
+    <svg class="logo" width="68" height="59" viewBox="0 0 68 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M68 19.6667L34.0557 0L0 19.6667V59L68 19.6667Z" fill="#005BBB"/>
+        <path d="M68 59V25.6334L38.9227 42.2083L68 59Z" fill="#005BBB"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.6327 45.366L12.25 58.866L11.75 58L35.1327 44.5L35.6327 45.366Z" fill="#005BBB"/>
+    </svg>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="#history">history</a></li>
+            <li><a href="#contact">contact us</a></li>
+        </ul>
+
+    </nav>
+</header>
+<section class="gallery" id="gallery">
+    <div class="gallery_items--wrapper">
+        <div class="gallery_item">
+            <img src="/imgs/image1.png" alt="first">
+        </div>
+        <div class="gallery_item"></div>
+        <div class="gallery_item">
+            <img src="imgs/image2.png" alt="second">
+        </div>
+    </div>
+    <div class="gallery_dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+<main class="main">
+    <p class="main_about">
+        We are an architectural firm with a long history and extensive experience. Our intention is to help Ukrainians rebuild their homes and buildings even better than they were before the war.
+        Please take a look at our history and contact us if you are intrested.  We would be really glad to join the help to Ukraine as we can.
+        Glory to Ukraine!
+    </p>
+    <section class="main_history" id="history">
+        <h2 class="heading">history</h2>
+        <hr class="separator"/>
+        <div class="history_cards--wrapper">
+            <div class="history_card history_card--mr">
+                <span class="history_year">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.
+            </div>
+            <div class="history_card">
+                <span class="history_year">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris neque nisi, pharetra, vehicula non lorem.
+            </div>
+        </div>
+    </section>
+    <section class="main_contact" id="contact">
+        <h2 class="heading">contact us</h2>
+        <hr class="separator"/>
+        <form action="" class="contact_wrapper">
+            <textarea  rows="1" name="message" class="contact_message" placeholder="type your message here"></textarea>
+            <button class="contact_btn" type="submit">send</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

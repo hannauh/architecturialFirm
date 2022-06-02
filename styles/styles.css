@@ -1,0 +1,186 @@
+/*
+Colors
+#005BBB - главный синий
+#FFD500 - главный желтый
+#ffffff - bg. text
+
+Text
+font-family: 'Montserrat';
+font-weight: 400, 900
+16(about, history)
+18 placeholder, history text
+20 nav
+24 (about text) (year )
+28 button, (about text >1024)
+30 (h2)
+40 (h2 >1024)
+48 year
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #005BBB;
+}
+body{
+    background-color: #fff;
+}
+.heading{
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 49px;
+    letter-spacing: 0.06em;
+    margin: 16px 0;
+    text-align: center;
+}
+.separator{
+    width:500px;
+    border-top:1px solid #005BBB;
+}
+
+.header{
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.logo{
+    margin-bottom: 81px;
+}
+.navigation  ul{
+    display: flex;
+    justify-content: center;
+}
+.navigation  ul li{
+    margin: 0 40px;
+}
+
+.navigation  ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    color: #005BBB;
+}
+.navigation  ul li:hover a{
+    color: #FFD500;
+}
+.navigation  ul li a:visited{
+    color: #005BBB;
+}
+.gallery{
+
+}
+.gallery_items--wrapper{
+    display: flex;
+    justify-content: center;
+}
+.gallery_item{
+    width: 400px;
+    height: 200px;
+    margin: 0 20px;
+    background: rgba(0, 91, 187, 0.2);
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-image:
+            linear-gradient(
+                    to bottom,
+                    #005BBB 50%,
+                    #FFD500 50%
+            ) 1;
+}
+.gallery_item img{
+    height: 100%;
+}
+.gallery_dots{
+    text-align: center;
+    margin-top: 40px;
+}
+.dot{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border:1px solid #005BBB;
+    background-color: #fff;
+    background-clip: content-box;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.dot.active{
+    background-color: #005BBB;
+}
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.main_about{
+    font-size: 28px;
+    line-height: 140%;
+    padding: 80px 0;
+}
+.main_history{
+    border-top: 1px solid #005BBB;
+    border-bottom: 1px solid #005BBB;
+}
+.history_cards--wrapper{
+    margin: 40px -28px 80px;
+    display: table;
+    border-spacing: 28px 0;
+}
+.history_card{
+    max-width: 497px;
+    background-color: #005BBB;
+    color: #ffffff;
+    border-left: 10px solid #FFD500;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 40px 40px 40px 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.history_card--mr{
+    margin-right: 28px;
+}
+.history_year{
+    font-size: 48px;
+    color: inherit;
+}
+
+.contact_wrapper{
+    border:1px solid #005BBB;
+    padding: 30px 260px 30px 30px;
+    margin: 40px 0 160px;
+    position: relative;
+}
+.contact_message{
+    border: 0;
+    color: black;
+    outline: none;
+    line-height: 18px;
+    width: 100%;
+    resize: none; /*уточнить*/
+}
+::placeholder{
+    color: #005BBB;
+    font-size: 18px;
+}
+.contact_btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    padding: 13px 56px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #005BBB;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+    border: none;
+    cursor: pointer;
+}
+
+
