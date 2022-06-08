@@ -16,6 +16,18 @@ font-weight: 400, 900
 40 (h2 >1024)
 48 year
 */
+.visuallyhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -30,12 +42,20 @@ body{
     text-transform: uppercase;
     line-height: 49px;
     letter-spacing: 0.06em;
-    margin: 16px 0;
+    margin-top: 16px;
+    padding-bottom: 16px;
     text-align: center;
+    position: relative;
 }
-.separator{
+.heading::after{
+    content: "";
     width:500px;
-    border-top:1px solid #005BBB;
+    height: 1px;
+    background-color: #005BBB;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header{
@@ -61,11 +81,12 @@ body{
     line-height: 24px;
     color: #005BBB;
 }
-.navigation  ul li:hover a{
-    color: #FFD500;
-}
-.navigation  ul li a:visited{
+
+.navigation  a:visited{
     color: #005BBB;
+}
+.navigation a:hover{
+    color: #FFD500;
 }
 .gallery{
 
@@ -126,9 +147,10 @@ body{
     border-bottom: 1px solid #005BBB;
 }
 .history_cards--wrapper{
-    margin: 40px -28px 80px;
-    display: table;
+    margin: 40px 0 80px;
     border-spacing: 28px 0;
+    display: flex;
+    justify-content: space-between;
 }
 .history_card{
     max-width: 497px;
@@ -138,8 +160,8 @@ body{
     font-size: 18px;
     line-height: 140%;
     padding: 40px 40px 40px 30px;
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 .history_card--mr{
     margin-right: 28px;
@@ -161,11 +183,13 @@ body{
     outline: none;
     line-height: 18px;
     width: 100%;
-    resize: none; /*уточнить*/
 }
-::placeholder{
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text);
     color: #005BBB;
     font-size: 18px;
+    line-height: 18px;
 }
 .contact_btn{
     position: absolute;
@@ -183,4 +207,18 @@ body{
     cursor: pointer;
 }
 
+/* tablet */
 
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1199px) {
+
+}
+
+/* mobile */
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 1023px) {
+
+}

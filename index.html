@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Architectural firm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
@@ -50,24 +51,29 @@
     </p>
     <section class="main_history" id="history">
         <h2 class="heading">history</h2>
-        <hr class="separator"/>
         <div class="history_cards--wrapper">
             <div class="history_card history_card--mr">
-                <span class="history_year">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.
+                <p><span class="history_year">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.</p>
             </div>
             <div class="history_card">
-                <span class="history_year">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris neque nisi, pharetra, vehicula non lorem.
+                <p><span class="history_year">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris neque nisi, pharetra, vehicula non lorem.</p>
             </div>
         </div>
     </section>
     <section class="main_contact" id="contact">
         <h2 class="heading">contact us</h2>
-        <hr class="separator"/>
         <form action="" class="contact_wrapper">
-            <textarea  rows="1" name="message" class="contact_message" placeholder="type your message here"></textarea>
-            <button class="contact_btn" type="submit">send</button>
+            <div class="contact_message js-messageValue" contenteditable="true" data-text="type your message here"></div>
+            <input type="text" name="message" class="visuallyhidden js-input"/>
+            <button class="contact_btn js-sendForm" type="button">send</button>
         </form>
     </section>
 </main>
+<script type="text/javascript">
+    document.querySelector('.js-sendForm').addEventListener('click', () => {
+        document.querySelector('.js-input').value = document.querySelector('.js-messageValue').textContent;
+        document.forms[0].submit();
+    });
+</script>
 </body>
 </html>
